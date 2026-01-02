@@ -1,0 +1,26 @@
+package templates
+
+import (
+    "fmt"
+)
+
+templ Html(contents templ.Component, cssNames []string, jsNames []string) {
+    <html lang="en">
+        <head>
+            <title></title>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+            <link href="/static/css/global.css" rel="stylesheet">
+            for _, fileName := range cssNames {
+                <link href={ string(templ.URL(fmt.Sprintf("/static/css/%s", fileName)))} rel="stylesheet">
+            }
+            for _, jsName := range jsNames {
+                <script src={ string(templ.URL(fmt.Sprintf("/static/js/%s", jsName)))}></script>
+            }
+        </head>
+        <body>
+            <main>@contents</main>
+        </body>
+    </html>
+}

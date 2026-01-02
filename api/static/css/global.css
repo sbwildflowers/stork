@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000007;
+  font-family: sans-serif;
+  color: #eee;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#baby-wordle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+@keyframes wordAdd {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+#guess_grid {
+  display: grid;
+  gap: 8px;
+}
+#guess_grid .guess-row {
+  display: flex;
+  gap: 8px;
+}
+#guess_grid div.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b8b8b8;
+  line-height: 1;
+  font-size: 20px;
+  width: 60px;
+  height: 60px;
+}
+#guess_grid div.container.used {
+  animation-name: wordAdd;
+  animation-duration: 0.5s;
+  border-color: #929292;
+}
+
+#faux-keyboard {
+  display: grid;
+  gap: 7px;
+}
+#faux-keyboard .row {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+#faux-keyboard .row .faux-key {
+  background-color: #727272;
+  padding: 20px 10px;
+  border-radius: 7px;
+  color: #fff;
+  cursor: pointer;
+  line-height: 1;
+  font-weight: bold;
+}
+#faux-keyboard .row .faux-key#enter {
+  font-size: 14px;
+}
+#faux-keyboard .row .faux-key svg {
+  fill: #fff;
+}
+
+.flipped .back {
+  box-shadow: inset 0 0 0 2px transparent;
+  color: #212121;
+}
+.flipped.grey .back {
+  background-color: #b8b8b8;
+  color: #727272;
+}
+.flipped.green .back {
+  background-color: #a8ca58;
+}
+.flipped.yellow .back {
+  background-color: #ffd966;
+}
+
+.flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+@keyframes flip {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(180deg);
+  }
+}
+.container.flipped .flipper {
+  animation-name: flip;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+.front,
+.back {
+  box-shadow: inset 0 0 0 2px #727272;
+  text-transform: capitalize;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+}
+
+.front {
+  background: transparent;
+}
+
+.back {
+  transform: rotateX(180deg);
+}
+
+/*# sourceMappingURL=global.css.map */
