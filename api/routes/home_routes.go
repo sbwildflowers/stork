@@ -9,6 +9,7 @@ import (
 func SetHomePageHandlers(router *http.ServeMux) {
 	router.HandleFunc("GET /{$}", controllers.GetHome)
 	router.HandleFunc("POST /guess", controllers.ProcessGuess)
+	router.HandleFunc("GET /cowardly-surrender", controllers.Surrender)
 	router.HandleFunc("GET /", http.HandlerFunc(handleNotFound))
 }
 

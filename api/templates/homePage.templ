@@ -11,7 +11,11 @@ func getStyle(count int) string {
 }
 
 templ HomePage() {
-    <h1>Baby Wordle</h1>
+    <div class="header">
+        <img src="/static/images/hold_fast.png" />
+        <h1>Baby Wordle</h1>
+        <img src="/static/images/lawson.png" />
+    </div>
     <div id="baby-wordle">
         <div id="guess_grid">
             for i := 0; i < 6; i++ {
@@ -32,6 +36,7 @@ templ HomePage() {
                 </div>
             }
         </div>
+        <div id="completeAndUtterFailure"></div>
         <div id="faux-keyboard">
             <div class="row row-1">
                 <div id="key-q" class="faux-key" data-value="q">Q</div>
@@ -71,4 +76,5 @@ templ HomePage() {
             </div>
         </div>
     </div>
+    <div id="successWrapper"></div>
 }

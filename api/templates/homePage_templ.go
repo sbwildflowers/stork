@@ -36,7 +36,7 @@ func HomePage() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h1>Baby Wordle</h1><div id=\"baby-wordle\"><div id=\"guess_grid\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"header\"><img src=\"/static/images/hold_fast.png\"><h1>Baby Wordle</h1><img src=\"/static/images/lawson.png\"></div><div id=\"baby-wordle\"><div id=\"guess_grid\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -48,7 +48,7 @@ func HomePage() templ.Component {
 			var templ_7745c5c3_Var2 string
 			templ_7745c5c3_Var2, templ_7745c5c3_Err = templ.JoinStringErrs(fmt.Sprintf("%d", i))
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/homePage.templ`, Line: 18, Col: 69}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/homePage.templ`, Line: 22, Col: 69}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var2))
 			if templ_7745c5c3_Err != nil {
@@ -71,7 +71,7 @@ func HomePage() templ.Component {
 					var templ_7745c5c3_Var3 string
 					templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(getStyle(c))
 					if templ_7745c5c3_Err != nil {
-						return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/homePage.templ`, Line: 24, Col: 55}
+						return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/homePage.templ`, Line: 28, Col: 55}
 					}
 					_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
 					if templ_7745c5c3_Err != nil {
@@ -92,7 +92,7 @@ func HomePage() templ.Component {
 				return templ_7745c5c3_Err
 			}
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div><div id=\"faux-keyboard\"><div class=\"row row-1\"><div id=\"key-q\" class=\"faux-key\" data-value=\"q\">Q</div><div id=\"key-w\" class=\"faux-key\" data-value=\"w\">W</div><div id=\"key-e\" class=\"faux-key\" data-value=\"e\">E</div><div id=\"key-r\" class=\"faux-key\" data-value=\"r\">R</div><div id=\"key-t\" class=\"faux-key\" data-value=\"t\">T</div><div id=\"key-y\" class=\"faux-key\" data-value=\"y\">Y</div><div id=\"key-u\" class=\"faux-key\" data-value=\"u\">U</div><div id=\"key-i\" class=\"faux-key\" data-value=\"i\">I</div><div id=\"key-o\" class=\"faux-key\" data-value=\"o\">O</div><div id=\"key-p\" class=\"faux-key\" data-value=\"p\">P</div></div><div class=\"row row-2\"><div id=\"key-a\" class=\"faux-key\" data-value=\"a\">A</div><div id=\"key-s\" class=\"faux-key\" data-value=\"s\">S</div><div id=\"key-d\" class=\"faux-key\" data-value=\"d\">D</div><div id=\"key-f\" class=\"faux-key\" data-value=\"f\">F</div><div id=\"key-g\" class=\"faux-key\" data-value=\"g\">G</div><div id=\"key-h\" class=\"faux-key\" data-value=\"h\">H</div><div id=\"key-j\" class=\"faux-key\" data-value=\"j\">J</div><div id=\"key-k\" class=\"faux-key\" data-value=\"k\">K</div><div id=\"key-l\" class=\"faux-key\" data-value=\"l\">L</div></div><div class=\"row row-3\"><div id=\"enter\" class=\"faux-key\" data-value=\"Enter\">ENTER</div><div id=\"key-z\" class=\"faux-key\" data-value=\"z\">Z</div><div id=\"key-x\" class=\"faux-key\" data-value=\"x\">X</div><div id=\"key-c\" class=\"faux-key\" data-value=\"c\">C</div><div id=\"key-v\" class=\"faux-key\" data-value=\"v\">V</div><div id=\"key-b\" class=\"faux-key\" data-value=\"b\">B</div><div id=\"key-n\" class=\"faux-key\" data-value=\"n\">N</div><div id=\"key-m\" class=\"faux-key\" data-value=\"m\">M</div><div id=\"back\" class=\"faux-key\" data-value=\"Backspace\"><svg aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" height=\"20\" viewBox=\"0 0 24 24\" width=\"20\" class=\"game-icon\" data-testid=\"icon-backspace\"><path fill=\"var(--color-tone-1)\" d=\"M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7.07L2.4 12l4.66-7H22v14zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59z\"></path></svg></div></div></div></div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div><div id=\"completeAndUtterFailure\"></div><div id=\"faux-keyboard\"><div class=\"row row-1\"><div id=\"key-q\" class=\"faux-key\" data-value=\"q\">Q</div><div id=\"key-w\" class=\"faux-key\" data-value=\"w\">W</div><div id=\"key-e\" class=\"faux-key\" data-value=\"e\">E</div><div id=\"key-r\" class=\"faux-key\" data-value=\"r\">R</div><div id=\"key-t\" class=\"faux-key\" data-value=\"t\">T</div><div id=\"key-y\" class=\"faux-key\" data-value=\"y\">Y</div><div id=\"key-u\" class=\"faux-key\" data-value=\"u\">U</div><div id=\"key-i\" class=\"faux-key\" data-value=\"i\">I</div><div id=\"key-o\" class=\"faux-key\" data-value=\"o\">O</div><div id=\"key-p\" class=\"faux-key\" data-value=\"p\">P</div></div><div class=\"row row-2\"><div id=\"key-a\" class=\"faux-key\" data-value=\"a\">A</div><div id=\"key-s\" class=\"faux-key\" data-value=\"s\">S</div><div id=\"key-d\" class=\"faux-key\" data-value=\"d\">D</div><div id=\"key-f\" class=\"faux-key\" data-value=\"f\">F</div><div id=\"key-g\" class=\"faux-key\" data-value=\"g\">G</div><div id=\"key-h\" class=\"faux-key\" data-value=\"h\">H</div><div id=\"key-j\" class=\"faux-key\" data-value=\"j\">J</div><div id=\"key-k\" class=\"faux-key\" data-value=\"k\">K</div><div id=\"key-l\" class=\"faux-key\" data-value=\"l\">L</div></div><div class=\"row row-3\"><div id=\"enter\" class=\"faux-key\" data-value=\"Enter\">ENTER</div><div id=\"key-z\" class=\"faux-key\" data-value=\"z\">Z</div><div id=\"key-x\" class=\"faux-key\" data-value=\"x\">X</div><div id=\"key-c\" class=\"faux-key\" data-value=\"c\">C</div><div id=\"key-v\" class=\"faux-key\" data-value=\"v\">V</div><div id=\"key-b\" class=\"faux-key\" data-value=\"b\">B</div><div id=\"key-n\" class=\"faux-key\" data-value=\"n\">N</div><div id=\"key-m\" class=\"faux-key\" data-value=\"m\">M</div><div id=\"back\" class=\"faux-key\" data-value=\"Backspace\"><svg aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" height=\"20\" viewBox=\"0 0 24 24\" width=\"20\" class=\"game-icon\" data-testid=\"icon-backspace\"><path fill=\"var(--color-tone-1)\" d=\"M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7.07L2.4 12l4.66-7H22v14zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59z\"></path></svg></div></div></div></div><div id=\"successWrapper\"></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
